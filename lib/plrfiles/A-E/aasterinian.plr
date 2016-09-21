@@ -1,0 +1,64 @@
+Name: Aasterinian
+Pass: AaQdj06a0pgXI
+Titl: the Wizard 1
+Sex : 1
+Size: 4
+Race: 1
+AdmL: 5
+Levl: 1
+Home: 1
+Mcls: 0=1
+CbFt: 0 0 0 0 0
+CbFt: 1 0 0 0 0
+CbFt: 2 0 0 0 0
+CbFt: 3 0 0 0 0
+CbFt: 4 0 0 0 0
+CbFt: 5 0 0 0 0
+SclF: 0 0
+SclF: 1 0
+Id  : 1
+Brth: 1268144713
+Crtd: 1414202650
+MxAg: 1971271379
+Plyd: 1645
+Last: 1474465240
+Host: localhost
+Hite: 148
+Wate: 47
+Act : h 0 0 0
+Aff : 0 h 0 0
+Pref: hmnrv 0 0 0
+AdmF: abcdefghijklmnopqrs 0 0 0
+ThB3: 2
+Fpnt: 2
+Room: -1
+SkCl: 0 28
+Hit : 14/14
+Mana: 100/100
+Move: 82/82
+Ki  : 1000/1000
+Str : 11
+Int : 20
+Wis : 14
+Dex : 14
+Con : 10
+Cha : 6
+Gold: 130
+Exp : 1
+Spek: 141
+Feat:
+82 1
+86 1
+0 0
+Affs:
+0 0 0 0 0 0
+Affv:
+0 0 0 0 0 0
+Smem:
+32 12
+-1 0
+Inna:
+-1 0
+LevD:
+level 1 0 1 4 0 0 0 0 0 0 2 28 1 0 0 0
+end

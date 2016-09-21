@@ -1,0 +1,215 @@
+#3100
+young man well dressed noble hurm wyvernspur~
+Hurm Wyvernspur~
+You see a well dressed young man wandering around.
+~
+Dressed in all the latest fashions, this young man also wears the crest of
+house Wyvernspur on his cloak.
+~
+cdlq 0 0 0 0 0 0 0 750 E
+6 19 7 6d4+12 1d5+2
+12 175 0 28
+8 8 1
+E
+#3101
+outlaw~
+an outlaw~
+An outlaw is here, looking for something to steal.
+~
+A petty thief, driven out of Kortaal most likey.
+~
+dq 0 0 0 0 0 0 0 -500 E
+4 20 8 4d6+8 1d5+1
+17 125 0 2
+8 8 1
+E
+#3102
+ilcurt~
+Ilcurt~
+Ilcurt Elventree, the merchent, is standing here.
+~
+He is an older looking elf, perhaps in his late one hundreds. He watches
+you with passing interest as you look about his store.
+~
+bdqs 0 0 0 l 0 0 0 900 E
+13 18 4 13d4+26 1d5+4
+120 350 1 28
+8 8 1
+E
+#3103
+tethgar~
+Tethgar~
+Tethgar the merchant, is standing here, eager to sell you his latest wares.
+~
+He's a young weaponsmith, who still has lots to learn.
+~
+bdqs 0 0 0 0 0 0 0 900 E
+5 19 8 5d4+10 1d5+1
+220 150 0 28
+8 8 1
+E
+#3104
+goblin~
+the goblin~
+A goblin is here looking for something to eat.
+~
+You see before you a small and twisted creature with knotted muscles and
+disgustingly green skin.  Doesn't look like the type you'd invite to dinner.
+~
+cdfq 0 0 0 l 0 0 0 -450 E
+1 20 10 1d10+2 1d5+0
+7 50 14 3
+8 8 1
+E
+#3105
+bandit~
+a bandit~
+A bandit is demanding your money!
+~
+A middle aged thief who has taken to highway robbery.
+~
+dq 0 0 0 0 0 0 0 -500 E
+4 20 8 4d6+8 1d5+1
+21 125 0 2
+8 8 1
+E
+#3106
+laele receptionist~
+Laele, the Receptionist~
+Laele, the receptionist of the Nightgate Inn is standing here.
+~
+Older for a human, Laele still has a certain diginity about her that reminds
+you of your mother. You get the feelings she might tell you to wash up and
+go off to bed any minute.
+~
+abcdlqs 0 0 0 0 0 0 0 900 E
+33 14 -6 33d4+66 3d7+11
+0 850 0 28
+8 8 2
+E
+#3107
+receptionist~
+the Receptionist~
+The receptionist of the Five Fine Fish Inn is standing here.
+~
+The receptionist looks underpaid.
+~
+abcdlqs 0 0 0 0 0 0 0 900 E
+33 14 -6 33d4+66 3d7+11
+0 850 0 28
+8 8 2
+E
+#3108
+citizen~
+the citizen~
+A citizen of Kaon is standing here.
+~
+An undefined string.~
+cdq 0 0 0 0 0 0 0 900 E
+4 20 8 4d4+8 1d5+1
+6 125 0 28
+8 8 1
+E
+#3109
+citizen tldo~
+the citizen of Tldo~
+A citizen of Tldo is standing here.
+~
+Nothing.
+~
+cdq 0 0 0 0 0 0 0 900 E
+4 20 8 4d4+8 1d5+1
+6 125 0 28
+8 8 1
+E
+#3110
+nelzol~
+Nelzol~
+Nelzol the merchent, is standing here, eager to sell you his latest wares. 
+~
+A human, male, well advanced in his years, seems to enjoy the quite life
+as a shop owner in Kaon.
+~
+bdqs 0 0 0 0 0 0 0 900 E
+20 16 0 20d4+40 2d6+6
+300 525 0 28
+8 8 1
+E
+#3111
+animated skeleton undead~
+a Skeleton~
+An animated skeleton is here, mocking life.
+~
+A full, human skeleton dress in ragged remains of clothing. You wonder what
+sort of magic could bring the dead back to life in such a twisted manner.
+~
+dq 0 0 0 r 0 0 0 -1000 E
+1 20 10 1d4+2 1d5+0
+0 50 0 28
+8 8 1
+E
+#3112
+decayed corpse zombie undead~
+a Zombie~
+A slightly decayed corpse is here, moving about!
+~
+What's left of some poor beggar, slightly decayed and stinking the whole
+place up! This zombie is a perversion of all that is Good.
+~
+dq 0 0 0 r 0 0 0 -1000 E
+2 20 9 2d4+4 1d5+0
+0 75 0 28
+8 8 1
+E
+#3113
+someone mourning crying mourner~
+a Mourner~
+Someone mourning the loss of a loved one stands here, crying over a grave.
+~
+A citizen of the Empire, wracked with the loss of a dear loved one. Dressed
+in black, except for a purple sash, he could be almost anyone.
+~
+cdq 0 0 0 0 0 0 0 1000 E
+1 20 10 1d4+2 1d5+0
+5 50 0 28
+8 8 1
+E
+#3114
+green skinned corpse ghoul undead~
+a Ghoul~
+A green skinned corpse moves about here, looking for a meal.
+~
+A well preserved corpse, save for the green skin and decayed clothing, the
+Ghoul is very hungry...searching for the flesh of the living!
+~
+cdq 0 0 0 r 0 0 0 -1000 E
+2 20 9 2d4+4 1d5+0
+0 75 0 28
+8 8 1
+E
+#3115
+young man runes tsalari mage necromancer~
+a young Tsalari mage~
+A young man, covered in runes is poking around here.
+~
+Dressed in black, rune covered, robes, this young man is Tsalari! Vile and
+evil, he follows Marduk and perverts all that is Good.
+~
+acdlq 0 0 0 0 0 0 0 -1000 E
+5 19 8 5d4+10 1d5+1
+10 150 0 0
+8 8 1
+E
+#3116
+man caretaker~
+the caretaker~
+The caretaker of the graveyard is here, sleeping.
+~
+A old man, with a balding head. His skin is wrinkeled and worn. 
+~
+dq 0 0 0 0 0 0 0 1000 E
+2 20 9 2d4+4 1d5+0
+0 75 0 28
+4 4 1
+E
+$

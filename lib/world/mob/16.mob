@@ -1,0 +1,258 @@
+#1600
+kortaal citizen~
+a @ycitizen of @GKortaal@n~
+A @ycitizen of @GKortaal@[3], perhaps a pompus noble, is standing here.
+~
+A loyal citizen of Kortaal and the Empire is here. He is dressed in the latest
+fashions of the @MEmpire@n.
+~
+dq 0 0 0 0 0 0 0 -1000 E
+6 19 7 6d10+12 1d5+2
+12 175 0 28
+8 8 1
+E
+#1601
+citizen woeld~
+a @ycitizen of @BWoeld@n~
+A @ycitizen of @BWoeld@[3] is standing here.
+~
+This is one of the commoners of Woeld. There sure seems to be plenty of them
+around for such a small town.
+~
+dq 0 0 0 0 0 0 0 -1000 E
+3 20 9 3d10+6 1d5+1
+3 100 0 28
+8 8 1
+E
+#1602
+citizen helgor~
+the @ycitizen of @CHelgor@n~
+A simple @ycitizen of @CHelgor@[3] goes about his business here.
+~
+Dressed rather simply, the citizen looks like a typical inhabitant of the 
+Empire.
+~
+dq 0 0 0 0 0 0 0 -1000 E
+4 20 8 4d10+8 1d5+1
+2 125 0 28
+8 8 1
+E
+#1603
+citizen helgor~
+the @ycitizen of @CHelgor@n~
+A simple @ycitizen of @CHelgor@[3] goes about her business here.
+~
+Dressed rather simply, the citizen looks like a typical inhabitant of the
+Empire.
+~
+dq 0 0 0 0 0 0 0 -1000 E
+4 20 8 4d10+8 1d5+1
+2 125 0 28
+8 8 2
+E
+#1604
+monk~
+the @ymonk@n~
+A @mmonk@[3], dressed in a simple @ybrown robe@[3] is here thinking about
+important things.
+~
+The monk's hooded robe is worn down, and you can see that his head is shaved
+except for a small @rponytail@n in the back, which is worn in a single
+braid. He also wears a @rgoatee@n.
+~
+diq 0 0 0 d 0 0 0 -1000 E
+5 19 8 5d8+10 1d5+1
+2 150 0 4
+8 8 1
+E
+#1605
+citizen maaken~
+a @ycitizen of @rMaaken@n~
+A @ycitizen of @rMaaken is here@[3].
+~
+Looks like a person who lives in this city.
+~
+dq 0 0 0 0 0 0 0 -1000 E
+1 20 10 1d10+2 1d5+0
+0 50 0 28
+8 8 1
+E
+#1606
+citizen~
+the @ycitizen@n~
+A @ycitizen of @mKaon@[3] is standing here.
+~
+An undefined string.~
+dq 0 0 0 0 0 0 0 -1000 E
+4 20 8 4d10+8 1d5+1
+6 125 0 28
+8 8 1
+E
+#1607
+citizen~
+the @ycitizen@n~
+A @ycitizen of @cTldo@[3] is standing here.
+~
+An undefined string.~
+dq 0 0 0 0 0 0 0 -1000 E
+4 20 8 4d10+8 1d5+1
+6 125 0 28
+8 8 1
+E
+#1608
+lady young sacrafice princess~
+the Lady Rowenmantle~
+Before you, bound and gagged is an attractive young woman.
+~
+Given other circumstances, you would imagine the Lady to be a stunning 
+beauty. Right now, however, she is a mess of tears and blood. Bound at the
+hands and ankles, a gag in her mouth. She is the last living heir of Chelnar's
+to the throne.
+~
+bdq 0 0 0 0 0 0 0 1000 E
+1 20 10 1d10+2 1d5+0
+0 50 0 28
+8 8 2
+E
+#1609
+demon son mi-go mi go~
+the son of @bMarduk@n~
+You see a @Mstrangly tenticled@[3] beast flying around here.
+~
+A pinkish thing about five feet long; with crustaceous bodies bearing vast
+pairs of dorsal fins or membranous wings and several sets of articulate 
+limbs, and with a sort of convoluted ellipsoid, covered with multitudes of
+very short antenna, where a head would ordinarily be...Sometimes walked on
+all their legs and sometimes on the hindmost pair only.
+~
+bdq 0 0 0 elx 0 0 0 -1000 E
+2 20 9 2d10+4 1d5+0
+0 75 10 3
+9 9 1
+E
+#1610
+flying demon strange nightgaunt~
+the @bNightgaunt@n~
+A strange looking @Rdemon@[3] is flying around here on leathery wings.
+~
+Shocking and uncooth black things with smooth, oily, whalelike surfaces,
+unpleasant horns that curve inward toward each other, bat wings whose 
+beating made no sound, ugly prehensile paws, and barbed tails that lash
+needlessly and disquietingly. And worst of all, they never smiled because
+they had no faces at all to smile with, but only a suggestive blankness 
+where a face ought to be. All they ever did was clutch and fly and tickle;
+that was the way of nightgaunts.
+~
+djlq 0 0 0 lx 0 0 0 -1000 E
+10 18 5 10d10+20 1d5+3
+0 275 10 3
+9 9 1
+E
+#1611
+byakhee demon~
+the @bByakhee@n~
+A strange looking @Rdemon@[3] is flying around here on leathery wings.
+~
+There flapped rhytmically a horde of tame, trained, hybrid winged things...
+not altogether crows, nor moles, nor buzzards, nor ants, nor decomposed
+human beings, but something I you would care not to recall.
+~
+djlq 0 0 0 lx 0 0 0 -1000 E
+12 18 4 12d10+24 1d5+4
+0 325 10 3
+9 9 1
+E
+#1612
+gorkel citizen citizen female~
+a female @rGorkel@n~
+A @rGorkel@[3] female stands here, she wears a slave collar.
+~
+Gorkel females are just slightly larger than their male counterparts. 
+With a dark red-orange fur, the 5'7" Gorkel is savage and powerful!
+Dressed in tattered rags and faded war paints, the young female Gorkel 
+looks as if she has not been treated well in the recent past.
+~
+dq 0 0 0 l 0 0 0 -800 E
+5 19 8 5d10+10 1d5+1
+0 150 10 28
+8 8 2
+E
+#1613
+gorkel male~
+a male @rGorkel@n~
+A male @rGorkel@[3] stands here, he wears a slave collar.
+~
+The gorilla-like humanoid is powerfully built, standing 5'5" and weighing 
+195lbs, the Gorkel looks dangerous. Dressed in the remains of a loin cloth, 
+and faded war paints, the young Gorkel looks as if he has not been treated 
+well in the recent past.
+~
+dq 0 0 0 l 0 0 0 -900 E
+6 19 7 6d10+12 1d5+2
+0 175 10 28
+8 8 1
+E
+#1614
+warhost~
+the @YWarhost@n~
+A member of @YHek's Warhost is here@[3].
+~
+Dressed in pure white, the @YWarhost@n glows with a @Bnatural beauty@n.
+She floats around gently on wings of @Ygolden light@n. You feel at peace 
+looking upon her.
+~
+adilq 0 0 0 cdeil 0 0 0 1000 E
+13 18 4 13d10+26 1d5+4
+0 350 22 5
+8 8 2
+E
+#1615
+byakhee demon~
+the @bByakhee@n~
+A strange looking @rdemon@[3] is flying around here on leathery wings.
+~
+There flapped rhytmically a horde of tame, trained, hybrid winged things...
+not altogether crows, nor moles, nor buzzards, nor ants, nor decomposed
+human beings, but something I you would care not to recall.
+~
+bdjlq 0 0 0 lxB 0 0 0 -1000 E
+12 18 4 12d10+24 1d5+4
+0 325 10 3
+8 8 1
+E
+T 1615
+#1616
+high priest~
+the High Priest of Marduk~
+The High Priest of Marduk is standing here.
+~
+Here stands a man totally given over to the worship of Marduk. He is dressed
+in long black robes with small holy symbols all over. You can feel the evil
+ebbing forth from this man.
+~
+abdjlnopq 0 0 0 eiq 0 0 0 -1000 E
+25 15 -2 25d8+50 2d6+8
+300 650 0 1
+8 8 1
+E
+#1617
+demonic steed~
+a demonic steed~
+A twisted, four-legged demon suitable for being ridden is here.
+~
+Squat and powerfully built, the demon looks to have been breed for carrying a
+rider long distances.  
+~
+dq 0 0 0 l 0 0 0 -1000 E
+5 19 8 5d4+10 1d5+1
+0 150 10 28
+8 8 2
+BareHandAttack: 7
+Str: 11
+Dex: 11
+Int: 11
+Wis: 11
+Con: 11
+Cha: 11
+E
+$

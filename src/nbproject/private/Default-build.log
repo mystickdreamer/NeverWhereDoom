@@ -1,0 +1,13 @@
+/usr/bin/make ../bin/circle
+make[1]: Entering directory '/cygdrive/d/Mud/Codebases/Doom/Doom2bilWORKING/workdoom/src'
+gcc -g -O2 -Wall    -c -o act.comm.o act.comm.c
+In file included from act.comm.c:12:0:
+sysdep.h:224:19: fatal error: crypt.h: No such file or directory
+ #include <crypt.h>
+                   ^
+compilation terminated.
+<builtin>: recipe for target 'act.comm.o' failed
+make[1]: *** [act.comm.o] Error 1
+make[1]: Leaving directory '/cygdrive/d/Mud/Codebases/Doom/Doom2bilWORKING/workdoom/src'
+Makefile:60: recipe for target 'all' failed
+make: *** [all] Error 2

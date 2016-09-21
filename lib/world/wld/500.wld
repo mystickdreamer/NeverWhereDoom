@@ -1,0 +1,21 @@
+#50000
+Info Room~
+You are in an unfinished room.
+~
+500 0 0 0 0 0
+D0
+~
+~
+0 0 50001 0 0 0 0 0 0 0 0
+S
+#50001
+new room~
+This unfinished room was created by Aasterinian.
+~
+500 0 0 0 0 0
+D2
+~
+~
+0 0 50000 0 0 0 0 0 0 0 0
+S
+$~

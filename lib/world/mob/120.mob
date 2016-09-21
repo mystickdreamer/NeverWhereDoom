@@ -1,0 +1,252 @@
+#12000
+ilmryn pharn innkeeper~
+@cIlmryn Pharn@n~
+@cIlmryn Pharn@[3], the owner of the @gBent Bow Inn@[3] is standing behind a
+counter and waiting to serve you.
+~
+You see before you, Ilmryn, a middle aged human. He is rather plain looking, 
+save for a large scar on his right cheek. He looks as of he may have been part
+of the @MImperial Army@n a few years ago.
+~
+abdqs 0 0 0 0 0 0 0 900 E
+12 18 4 12d4+24 1d5+4
+125 325 0 28
+8 8 1
+E
+#12001
+zilvra lhalabar~
+@CZilvra Lhalabar@n~
+@CZilvra Lhalabar@[3], an old looking crone, is here selling her @Yjewerly@[3].
+~
+An undefined string.~
+bdqs 0 0 0 0 0 0 0 750 E
+7 19 7 7d4+14 1d5+2
+250 200 0 0
+8 8 2
+E
+#12002
+fillaro khammath~
+@RFillaro Khammath@n~
+@RFillaro Khammath@[3], the weapons monger, is standing here showing his wares.
+~
+An undefined string.~
+bdqs 0 0 0 0 0 0 0 750 E
+10 18 5 10d4+20 1d5+3
+350 275 0 28
+8 8 1
+E
+#12003
+peraphon thond~
+@bPeraphon Thond@n~
+@bPeraphon Thond@[3], the merchant's merchant, is standing here ready to help you.
+~
+An undefined string.~
+bdqs 0 0 0 0 0 0 0 750 E
+3 20 9 3d4+6 1d5+1
+132 100 0 28
+8 8 1
+E
+#12004
+alystin coloara~
+@yAlystin Coloara@n~
+@yAlystin Coloara@[3], a cute young woman is waiting to help you to your private room.
+~
+An undefined string.~
+abcdlqs 0 0 0 g 0 0 0 900 E
+6 19 7 6d4+12 1d5+2
+0 175 0 28
+8 8 2
+E
+#12005
+old wrinkled wizard khelve~
+@mKhelve@n the old wizard~
+A very @mold wizard@[3] is resting upon his staff in a quasi-nap.
+~
+The old man is dressed in greyish, sort of mousey colored robes. He is in
+a nappish state where he keeps babbling randomly to himself when he nods off.
+~
+bdqs 0 0 0 e 0 0 0 750 E
+2 20 9 2d4+4 1d5+0
+2500 75 0 0
+8 8 1
+E
+#12006
+assassin yazston~
+@bYazston@n the @Rassassin@n~
+You see a cloaked figure hiding in the shadows watching the room.
+~
+You cannot tell much about this person, as they are cloaked in the rooms
+blackness. You can, however, see a sword worn at the hip for quick access.
+~
+bdlnopqr 0 0 0 deglqu 0 0 0 -1000 E
+14 18 3 14d6+28 1d5+4
+225 375 0 2
+8 8 1
+E
+#12007
+merchant thief nyaril~
+@bNyaril@n the merchant~
+A merchant stands before you, as if waiting to @Minstruct@[3] you.
+~
+This merchant, perhaps in his mid forties stands before you in grey 
+robes made for travel. He looks as if he is waiting for someone.
+~
+bdqs 0 0 0 0 0 0 0 -500 E
+19 17 1 19d6+38 1d5+6
+0 500 0 2
+8 8 1
+E
+#12008
+paladin nalfein~
+@gNalfein@n the @YPaladin@n~
+You see clad in battle armor, a @Yholy Paladin of Hek@[3] guarding the church.
+~
+Years of training and dedication are requried of all the noble @YPaladins of Hek@n.
+The man you see before you is no exeption, he is dressed in full battle armor, 
+and looks like he knows how to use his two handed sword quite well.
+~
+abcdeilnopqr 0 0 0 de 0 0 0 1000 E
+30 14 -5 30d8+60 3d7+10
+125 775 0 1
+8 8 1
+E
+#12009
+high priest darmos lauthyr~
+@cDarmos Lauthyr@n the @YHigh Priest of Hek@n~
+The @YHigh Priest@[3] of Tekaro, his holyness @cDarmos Lauthyr@[3], stands before you.
+~
+You see an older man, perhaps in his late fifties dressed in the holy robes
+of his God, @YHek@n.
+~
+abdilnoqr 0 0 0 de 0 0 0 1000 E
+11 18 5 11d8+22 1d5+3
+100 300 0 1
+8 8 1
+E
+#12010
+viscount xiltyn warrior red raven~
+@gViscount @MXiltyn@n~
+A member of the @RRed Ravens@[3], @gViscount @MXiltyn@[3], is here
+overlooking the yard.
+~
+Wearing full battle armor, and @MImperial@n rank denoting him as a @gViscount@n, the
+veteran Xiltyn is overseeing the combat in the yard.
+~
+abdenopqr 0 0 0 e 0 0 0 550 E
+30 14 -5 30d10+60 3d7+10
+35 775 0 3
+8 8 1
+E
+#12011
+young half-elven elf elven half rayanna rose leader red raven~
+@RRayanna Rose@n~
+A battle hardened young @yhalf-elven@[3] female, dressed in armor stands here overseeing her troops.
+~
+@RRayanna Rose@n, leader of the @RRed Ravens@n, @gDuchess@n and cousin to
+the late Chelnar the IV is here. She is looking around and shouting orders
+every now and again at her troops.
+~
+abdnopqrs 0 0 0 el 0 0 0 650 E
+16 17 2 16d10+32 1d5+5
+105 425 4 3
+8 8 2
+E
+#12012
+myrmeen lhal lady~
+@yMyrmeen Lhal@n~
+The @gLady @yMyrmeen Lhal@[3], ruler of @MTekaro@[3] stands before you.
+~
+The popular and efficient ruler of @MTekaro@n, @yMyrmeen@n enjoys
+popular support within the Empire, and has a firm hold on the
+@MEmperor's@n ear.
+~
+bcdq 0 0 0 0 0 0 0 750 E
+14 18 3 14d4+28 1d5+4
+120 375 0 0
+8 8 2
+E
+#12013
+leader baron thomdor~
+@gBaron @MThomdor@n~
+The leader of the @MPurple Dragons in Tekaro@[3], @gBaron @MThomdor@[3] stands here.
+~
+He is leader of the @MPurple Dragons@n in this region, he was a close
+friend to the late King Chelnar. He is a tough and fair leader of the
+militia.
+~
+cdeilq 0 0 0 0 0 0 0 1000 E
+17 17 2 17d10+34 1d5+5
+30 450 0 3
+8 8 1
+E
+#12014
+citizen tekaroin commoner~
+a @ycitizen of @MTekaro@n~
+A @MTekaroin @ycommoner@[3] is going about his daily business.
+~
+An undefined string.~
+cdq 0 0 0 0 0 0 0 650 E
+7 19 7 7d4+14 1d5+2
+32 200 0 28
+8 8 1
+E
+#12015
+citizen tekaroin noble noblewoman~
+a @gnoblewoman of @MTekaro@n~
+An @MTekaroin @gnoblewoman@[3] is going about her daily business.
+~
+An undefined string.~
+cdq 0 0 0 0 0 0 0 700 E
+8 19 6 8d4+16 1d5+2
+49 225 0 28
+8 8 2
+E
+#12016
+red raven mercenary warrior~
+the @RRed Raven@n mercenary~
+A warrior belonging to the @RRed Ravens@[3] is standing here.
+~
+An undefined string.~
+dq 0 0 0 0 0 0 0 250 E
+4 20 8 4d10+8 1d5+1
+32 125 0 3
+8 8 1
+E
+#12017
+citizen~
+the @ycitizen@n~
+A @ycitizen of @MTekaro@[3] is standing here.
+~
+An undefined string.~
+cdq 0 0 0 0 0 0 0 900 E
+5 19 8 5d4+10 1d5+1
+19 150 0 28
+8 8 1
+E
+#12036
+daglar maermeet armorer~
+@bDaglar Maermeet@n~
+@bDaglar Maermeet@[3], the Armorer, looks at you hoping you'll buy his wares.
+~
+A fat, nice looking armorer. But you can see that he has many scars on his
+body.
+~
+bcdlnoq 0 0 0 0 0 0 0 750 E
+12 18 4 12d4+24 1d5+4
+1200 325 0 28
+8 8 1
+E
+#12037
+felten soldier purple guard knight~
+Felten the @MDragon@n Knight~
+A @MDragon@[3] Knight is here, guarding the gate.
+~
+Part of an elite brotherhood of Knights, Felten guards the gate of Tekaro
+with his very life against the Goblin hordes of the north!
+~
+bdlnopqs 0 0 0 0 0 0 0 1000 E
+20 16 0 20d8+40 2d6+6
+0 525 0 30
+8 8 1
+E
+$

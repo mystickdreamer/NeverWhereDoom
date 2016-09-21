@@ -1,0 +1,29 @@
+#700
+token talisman~
+a @YTalisman@n game token~
+A player token for the game of @YTalisman@n has been left here.~
+~
+12 0 0 0 0 a 0 0 0 0 0 0 0
+0 0 0 0 100 100 0 22 0 0 0 0 0 0 0 0
+0 0 0 0
+T 701
+T 702
+T 703
+Z
+0
+#799
+adventure card~
+an adventure card~
+An Adventure Card is here, face up.~
+~
+12 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 100 100 0 16 0 0 0 0 0 0 0 0
+0 0 0 0
+T 704
+Z
+8
+E
+adventure card~
+The card comes from the @gAdventure@n deck!
+~
+$~

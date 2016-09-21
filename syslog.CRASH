@@ -1,0 +1,30 @@
+Sep 21 06:38:56 :: Resetting #113: Tldo (rooms 11300-11399).
+Sep 21 06:38:56 :: Resetting #114: Kaon (rooms 11400-11499).
+Sep 21 06:38:56 :: Resetting #118: Helgor (rooms 11800-11899).
+Sep 21 06:38:56 :: Resetting #119: Woeld (rooms 11900-11999).
+Sep 21 06:38:56 :: Resetting #120: Tekaro (rooms 12000-12099).
+Sep 21 06:38:56 :: Resetting #500: New Zone (rooms 50000-50099).
+Sep 21 06:38:56 :: Resetting #1000: New Zone (rooms 100000-100099).
+Sep 21 06:38:56 :: Boot db -- DONE.
+Sep 21 06:38:56 :: Signal trapping.
+Sep 21 06:38:56 :: Entering game loop.
+Sep 21 06:38:56 :: No connections.  Going to sleep.
+Sep 21 06:40:22 :: New connection.  Waking up.
+Sep 21 06:40:30 :: Bad PW: Aasterinian [localhost]
+Sep 21 06:40:32 :: Aasterinian [localhost] has connected.
+Sep 21 06:40:40 :: Aasterinian retrieving crash-saved items and entering game.
+Sep 21 06:40:40 :: Aasterinian (level 1) has 1 objects (max 30).
+Sep 21 06:40:40 :: Aasterinian had no variable file
+Sep 21 06:42:06 :: Aasterinian tried to get help on obj-portal
+Sep 21 06:46:12 :: (GC) Shutdown by Aasterinian.
+Sep 21 06:46:12 :: Closing all sockets.
+Sep 21 06:46:12 :: Closing link to: Aasterinian.
+Sep 21 06:46:12 :: Saving current MUD time.
+Sep 21 06:46:12 :: Normal termination of game.
+Sep 21 06:46:12 :: Clearing game world.
+Sep 21 06:46:12 :: Freeing Assemblies.
+Sep 21 06:46:12 :: Clearing other memory.
+Sep 21 06:46:12 :: Done.
+Quick boot mode -- rent check supressed.
+Using file descriptor for logging.
+autoscript killed Wed Sep 21 06:46:12 PDT 2016

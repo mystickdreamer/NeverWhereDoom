@@ -1,0 +1,12 @@
+@Version: 2
+#57
+None.~
+Coranos Lycaeum~
+5700 5799 40 2 0 0 0 0 0 0
+D 0 5737 1 1 -1 -1 	(Stairs)
+D 0 5702 5 2 -1 -1 	(Inside the Library)
+D 0 5714 4 2 -1 -1 	(Library Basement)
+D 0 5714 2 2 -1 -1 	(Library Basement)
+D 0 5715 0 2 -1 -1 	(Under the Library)
+S
+$
