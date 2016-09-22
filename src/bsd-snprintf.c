@@ -749,7 +749,7 @@ main(void)
 		"%qd",
 		NULL
 	};
-	long long int_nums[] = { -1, 134, 91340, 341, 0203, 0, 9999999 };
+	long long int_nums[] = { -1, 134, 91340, 341, 0203, 0, 99999999 };
 	int x, y;
 	int fail = 0;
 	int num = 0;

@@ -141,7 +141,7 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
     case -1:
     case 0:
       line_low = 1;
-      line_high = 999999;
+      line_high = 99999999;
       break;
     case 1:
       line_high = line_low;
@@ -251,14 +251,14 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
       switch (sscanf(string, " %d - %d ", &line_low, &line_high)) {
       case 0:
 	line_low = 1;
-	line_high = 999999;
+	line_high = 99999999;
 	break;
       case 1:
 	line_high = line_low;
 	break;
     } else {
       line_low = 1;
-      line_high = 999999;
+      line_high = 99999999;
     }
 
     if (line_low < 1) {
@@ -269,7 +269,7 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
       return;
     }
     *buf = '\0';
-    if (line_high < 999999 || line_low > 1)
+    if (line_high < 99999999 || line_low > 1)
       sprintf(buf, "Current buffer range [%d - %d]:\r\n", line_low, line_high);
     i = 1;
     total_len = 0;
@@ -313,14 +313,14 @@ void parse_edit_action(int command, char *string, struct descriptor_data *d)
       switch (sscanf(string, " %d - %d ", &line_low, &line_high)) {
       case 0:
 	line_low = 1;
-	line_high = 999999;
+	line_high = 99999999;
 	break;
       case 1:
 	line_high = line_low;
 	break;
     } else {
       line_low = 1;
-      line_high = 999999;
+      line_high = 99999999;
     }
 
     if (line_low < 1) {

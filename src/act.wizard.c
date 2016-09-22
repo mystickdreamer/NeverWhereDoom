@@ -1209,6 +1209,7 @@ ACMD(do_shutdown)
     circle_reboot = 2; /* do not autosave olc */
   } else if (!str_cmp(arg, "pause")) {
     log("(GC) Shutdown by %s.", GET_NAME(ch));
+    GET_LOADROOM(ch) = GET_ROOM_VNUM(IN_ROOM(ch));
     send_to_all("Shutting down for maintenance.\r\n");
     touch(PAUSE_FILE);
     circle_shutdown = 1;

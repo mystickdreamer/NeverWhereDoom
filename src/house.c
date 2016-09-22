@@ -610,7 +610,7 @@ int House_load(room_vnum rvnum)
       } else if (nr < 0) {
         continue;
       } else {
-        if(nr >= 999999)
+        if(nr >= 99999999)
           continue;
         temp=read_object(nr,VIRTUAL);
         if (!temp) {
