@@ -132,8 +132,9 @@ ACMD(do_save) {
     write_aliases(ch);
     save_char(ch);
     Crash_crashsave(ch);
-    if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE_CRASH))
-        House_crashsave(GET_ROOM_VNUM(IN_ROOM(ch)));
+    //    if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE_CRASH))
+    //       House_crashsave(GET_ROOM_VNUM(IN_ROOM(ch)));
+    GET_LOADROOM(ch) = GET_ROOM_VNUM(IN_ROOM(ch));
 }
 
 /* generic function for commands which are normally overridden by
