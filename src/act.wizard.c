@@ -1187,6 +1187,7 @@ ACMD(do_shutdown)
 
   if (!*arg) {
     log("(GC) Shutdown by %s.", GET_NAME(ch));
+    GET_LOADROOM(ch) = GET_ROOM_VNUM(IN_ROOM(ch));
     send_to_all("Shutting down.\r\n");
     circle_shutdown = 1;
   } else if (!str_cmp(arg, "reboot")) {
@@ -1196,11 +1197,13 @@ ACMD(do_shutdown)
     circle_shutdown = circle_reboot = 1;
   } else if (!str_cmp(arg, "die")) {
     log("(GC) Shutdown by %s.", GET_NAME(ch));
+    GET_LOADROOM(ch) = GET_ROOM_VNUM(IN_ROOM(ch));
     send_to_all("Shutting down for maintenance.\r\n");
     touch(KILLSCRIPT_FILE);
     circle_shutdown = 1;
   } else if (!str_cmp(arg, "now")) {
     log("(GC) Shutdown NOW by %s.", GET_NAME(ch));
+    GET_LOADROOM(ch) = GET_ROOM_VNUM(IN_ROOM(ch));
     send_to_all("Rebooting.. come back in a minute or two.\r\n");
     circle_shutdown = 1;
     circle_reboot = 2; /* do not autosave olc */
@@ -2689,7 +2692,7 @@ ACMD(do_show)
       }
     } else {
       low = -1;
-      high = 9999999;
+      high = 99999999;
     }
     strp = sprintuniques(low, high);
     page_string(ch->desc, strp, TRUE);
