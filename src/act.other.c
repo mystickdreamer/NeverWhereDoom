@@ -124,6 +124,7 @@ ACMD(do_save) {
         if (CONFIG_AUTO_SAVE && !GET_ADMLEVEL(ch)) {
             send_to_char(ch, "Saving.\r\n");
             write_aliases(ch);
+            GET_LOADROOM(ch) = GET_ROOM_VNUM(IN_ROOM(ch));
             return;
         }
         send_to_char(ch, "Saving.\r\n");
