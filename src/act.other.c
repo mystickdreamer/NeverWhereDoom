@@ -134,7 +134,6 @@ ACMD(do_save)
   }
 
   write_aliases(ch);
-  GET_LOADROOM(ch) = GET_ROOM_VNUM(IN_ROOM(ch));
   save_char(ch);
   Crash_crashsave(ch);
   if (ROOM_FLAGGED(IN_ROOM(ch), ROOM_HOUSE_CRASH))
