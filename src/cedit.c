@@ -558,6 +558,9 @@ int save_config( IDXTYPE nowhere )
    ************************************************************************/
   fprintf(fl, "\n\n\n* [ Room Numbers ]\n");
   
+  fprintf(fl, "* The virtual number of the room that character creation is in.\n"
+  	      "create_start_room = %d\n\n", CONFIG_CREATE_START);
+  
   fprintf(fl, "* The virtual number of the room that mortals should enter at.\n"
   	      "mortal_start_room = %d\n\n", CONFIG_MORTAL_START);
   
@@ -877,6 +880,7 @@ void cedit_disp_room_numbers(struct descriptor_data *d)
   clear_screen(d);
   
   write_to_output(d, "\r\n\r\n"
+        "@WA@B) @CCreate Start Room   : @c%d\r\n"
   	"@WA@B) @CMortal Start Room   : @c%d\r\n"
   	"@WB@B) @CImmortal Start Room : @c%d\r\n"
   	"@WC@B) @CFrozen Start Room   : @c%d\r\n"
@@ -885,6 +889,7 @@ void cedit_disp_room_numbers(struct descriptor_data *d)
   	"@W3@B) @CDonation Room #3    : @c%d\r\n"
   	"@WQ@B) @CExit To The Main Menu\r\n"
   	"@WEnter your choice : @n",
+        OLC_CONFIG(d)->room_nums.create_start_room,
   	OLC_CONFIG(d)->room_nums.mortal_start_room,
   	OLC_CONFIG(d)->room_nums.immort_start_room,
   	OLC_CONFIG(d)->room_nums.frozen_start_room,
@@ -1395,18 +1400,24 @@ void cedit_parse(struct descriptor_data *d, char *arg)
       switch (*arg) {
         case 'a':
         case 'A':
+          write_to_output(d, "Enter the room's vnum where chracter creation is : ");
+          OLC_MODE(d) = CEDIT_CREATE_START_ROOM;
+          return;
+          
+        case 'b':
+        case 'B':
           write_to_output(d, "Enter the room's vnum where mortals should load into : ");
           OLC_MODE(d) = CEDIT_MORTAL_START_ROOM;
           return;
        
-        case 'b':
-        case 'B':
+        case 'c':
+        case 'C':
           write_to_output(d, "Enter the room's vnum where immortals should load into : ");
           OLC_MODE(d) = CEDIT_IMMORT_START_ROOM;
           return;
        
-        case 'c':
-        case 'C':
+        case 'd':
+        case 'D':
         write_to_output(d, "Enter the room's vnum where frozen people should load into : ");
         OLC_MODE(d) = CEDIT_FROZEN_START_ROOM;
         return;
@@ -1932,7 +1943,24 @@ void cedit_parse(struct descriptor_data *d, char *arg)
         cedit_disp_crash_save_options(d);
       }
       break;
-
+      
+      
+/*-------------------------------------------------------------------*/    
+    case CEDIT_CREATE_START_ROOM:
+      if (!*arg) {
+        write_to_output(d,
+          "That is an invalid choice!\r\n"
+          "Enter the room's vnum where character creation : ");
+      } else if (real_room(atoi(arg)) == NOWHERE) {
+        write_to_output(d,
+          "That room doesn't exist!\r\n"
+          "Enter the room's vnum where character creation : ");
+      } else {
+        OLC_CONFIG(d)->room_nums.create_start_room = atoi(arg);
+        cedit_disp_room_numbers(d);
+      }
+      break;
+    
 /*-------------------------------------------------------------------*/
     
     case CEDIT_MORTAL_START_ROOM:
