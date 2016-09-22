@@ -2076,6 +2076,7 @@ struct crash_save_data {
  * The room numbers. 
  */
 struct room_numbers {
+  room_vnum create_start_room;  /* vnum of room for creation */
   room_vnum mortal_start_room;	/* vnum of room that mortals enter at.  */
   room_vnum immort_start_room;  /* vnum of room that immorts enter at.  */
   room_vnum frozen_start_room;  /* vnum of room that frozen ppl enter.  */

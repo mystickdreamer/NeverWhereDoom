@@ -76,6 +76,7 @@ int mini_mud = 0;		/* mini-mud mode?		 */
 int no_rent_check = 0;		/* skip rent check on boot?	 */
 time_t boot_time = 0;		/* time of mud boot		 */
 int circle_restrict = 0;	/* level of game restriction	 */
+room_rnum r_create_start_room;	/* rnum of create start room	 */
 room_rnum r_mortal_start_room;	/* rnum of mortal start room	 */
 room_rnum r_immort_start_room;	/* rnum of immort start room	 */
 room_rnum r_frozen_start_room;	/* rnum of frozen start room	 */
@@ -1505,6 +1506,10 @@ void setup_dir(FILE *fl, int room, int dir)
 /* make sure the start rooms exist & resolve their vnums to rnums */
 void check_start_rooms(void)
 {
+    if ((r_create_start_room = real_room(CONFIG_CREATE_START)) == NOWHERE) {
+    log("SYSERR:  Creation start room does not exist.  Change create_start_room in lib/etc/config.");
+    exit(1);
+  }
   if ((r_mortal_start_room = real_room(CONFIG_MORTAL_START)) == NOWHERE) {
     log("SYSERR:  Mortal start room does not exist.  Change mortal_start_room in lib/etc/config.");
     exit(1);
@@ -4384,6 +4389,7 @@ extern int auto_save;
 extern int autosave_time;
 extern int crash_file_timeout;
 extern int rent_file_timeout;
+extern room_vnum create_start_room;
 extern room_vnum mortal_start_room;
 extern room_vnum immort_start_room;
 extern room_vnum frozen_start_room;
@@ -4481,6 +4487,7 @@ void load_default_config( void )
   /****************************************************************************/
   /** Room numbers.                                                          **/
   /****************************************************************************/
+  CONFIG_CREATE_START           = create_start_room;
   CONFIG_MORTAL_START           = mortal_start_room;
   CONFIG_IMMORTAL_START         = immort_start_room;
   CONFIG_FROZEN_START           = frozen_start_room;
@@ -4604,6 +4611,8 @@ void load_config( void )
           }
 #endif /* !HAVE_ZLIB_H */
         }
+        else if (!str_cmp(tag, "create_start_room"))
+          CONFIG_CREATE_START = num;
         break;
         
       case 'd':

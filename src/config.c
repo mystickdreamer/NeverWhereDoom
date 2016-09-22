@@ -131,7 +131,7 @@ int pulse_current = 10;
  * able to carry around things like boards.  That's not necessarily a bad
  * thing, but this will be left at a default of 'NO' for historic reasons.
  */
-int load_into_inventory = NO;
+int load_into_inventory = YES;
 
 /* "okay" etc. */
 const char *OK = "Okay.\r\n";
@@ -265,6 +265,9 @@ int selfdelete_fastwipe = YES;
 
 
 /* ROOM NUMBERS */
+
+/* virtual number of room that creation goes to */
+room_vnum create_start_room = 2;
 
 /* virtual number of room that mortals should enter at */
 room_vnum mortal_start_room = 1000;

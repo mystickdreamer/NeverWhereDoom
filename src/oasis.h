@@ -437,6 +437,7 @@ struct oasis_olc_data {
 #define CEDIT_MAP_OPTION		69
 #define CEDIT_MAP_SIZE			70
 #define CEDIT_MINIMAP_SIZE		71
+#define CEDIT_CREATE_START_ROOM		72
 
 
 #define ASSEDIT_DO_NOT_USE              0

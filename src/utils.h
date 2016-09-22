@@ -777,6 +777,7 @@ int wield_type(int chsize, const struct obj_data *weap);
 #define CONFIG_RENT_TIMEOUT     config_info.csd.rent_file_timeout
 
   /** Room Numbers **/
+#define CONFIG_CREATE_START     config_info.room_nums.create_start_room
 #define CONFIG_MORTAL_START     config_info.room_nums.mortal_start_room
 #define CONFIG_IMMORTAL_START   config_info.room_nums.immort_start_room
 #define CONFIG_FROZEN_START     config_info.room_nums.frozen_start_room

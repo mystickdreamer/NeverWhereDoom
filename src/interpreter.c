@@ -1754,8 +1754,9 @@ void nanny(struct descriptor_data *d, char *arg)
     echo_on(d);
 
     if (STATE(d) == CON_CNFPASSWD) {
-      write_to_output(d, "\r\nWhat is your sex (@WM/F@n)? ");
-      STATE(d) = CON_QSEX;
+//      write_to_output(d, "\r\nWhat is your sex (@WM/F@n)? ");
+//     STATE(d) = CON_QSEX;
+        GET_RACE(d->character) = 23;
     } else {
       save_char(d->character);
       write_to_output(d, "\r\nDone.\r\n%s", CONFIG_MENU);

@@ -146,6 +146,7 @@ void cedit_setup(struct descriptor_data *d)
   /****************************************************************************/
   /** Room Numbers                                                           **/
   /****************************************************************************/
+  OLC_CONFIG(d)->room_nums.create_start_room = CONFIG_CREATE_START;
   OLC_CONFIG(d)->room_nums.mortal_start_room = CONFIG_MORTAL_START;
   OLC_CONFIG(d)->room_nums.immort_start_room = CONFIG_IMMORTAL_START;
   OLC_CONFIG(d)->room_nums.frozen_start_room = CONFIG_FROZEN_START;
@@ -289,6 +290,7 @@ void cedit_save_internally(struct descriptor_data *d)
   /****************************************************************************/
   /** Room Numbers                                                           **/
   /****************************************************************************/
+  CONFIG_CREATE_START = OLC_CONFIG(d)->room_nums.create_start_room;
   CONFIG_MORTAL_START = OLC_CONFIG(d)->room_nums.mortal_start_room;
   CONFIG_IMMORTAL_START = OLC_CONFIG(d)->room_nums.immort_start_room;
   CONFIG_FROZEN_START = OLC_CONFIG(d)->room_nums.frozen_start_room;

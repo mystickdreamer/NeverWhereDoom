@@ -27,6 +27,7 @@ extern struct zone_data *zone_table;
 extern struct index_data *mob_index;
 extern struct shop_data *shop_index;
 extern zone_rnum top_of_zone_table;
+extern room_rnum r_create_start_room;
 extern room_rnum r_mortal_start_room;
 extern room_rnum r_immort_start_room;
 extern room_rnum r_frozen_start_room;
@@ -115,6 +116,7 @@ room_rnum add_room(struct room_data *room)
       }
       
   /* Update the loadroom table. Adds 1 or 0. */
+  r_create_start_room += (r_create_start_room >= found);
   r_mortal_start_room += (r_mortal_start_room >= found);
   r_immort_start_room += (r_immort_start_room >= found);
   r_frozen_start_room += (r_frozen_start_room >= found);
@@ -156,7 +158,11 @@ int delete_room(room_rnum rnum)
 
   /* This is something you might want to read about in the logs. */
   log("GenOLC: delete_room: Deleting room #%d (%s).", room->number, room->name);
-
+  
+  if (r_create_start_room == rnum) {
+    log("WARNING: GenOLC: delete_room: Deleting create start room!");
+    r_create_start_room = 0;	/* The Void */
+  }
   if (r_mortal_start_room == rnum) {
     log("WARNING: GenOLC: delete_room: Deleting mortal start room!");
     r_mortal_start_room = 0;	/* The Void */
