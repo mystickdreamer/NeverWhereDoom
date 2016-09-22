@@ -31,6 +31,7 @@ const char *race_names[NUM_RACES+1] = {
   "lizardfolk",
   "warhost",
   "faerie",
+  "spirit",
   "\n"
 };
 
@@ -59,6 +60,7 @@ const char *race_abbrevs[NUM_RACES+1] = {
   "Mnd",
   "War",
   "Fae",
+  "Spi",
   "\n"
 };
 
@@ -87,6 +89,7 @@ const char *pc_race_types[NUM_RACES+1] = {
   "Lizardfolk",
   "Warhost",
   "Faerie",
+  "Spirit",
   "\n"
 };
 
@@ -95,10 +98,10 @@ const char *pc_race_types[NUM_RACES+1] = {
 
 /* Original Race/Gender Breakout */
 int race_ok_gender[NUM_SEX][NUM_RACES] = {
-/*        H, E, G, D, H, H, D, H, A, C, D, D, F, G, G, I, O, S, T, M, K, L, W, F */
-/* N */ { N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N },
-/* M */ { Y, Y, Y, Y, Y, Y, N, Y, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N },
-/* F */ { Y, Y, Y, Y, Y, Y, N, Y, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N }
+/*        H, E, G, D, H, H, D, H, A, C, D, D, F, G, G, I, O, S, T, M, K, L, W, F, S*/
+/* N */ { N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N },
+/* M */ { Y, Y, Y, Y, Y, Y, N, Y, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N },
+/* F */ { Y, Y, Y, Y, Y, Y, N, Y, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N }
 
 };
 
@@ -127,6 +130,7 @@ const char *race_display[NUM_RACES] = {
   "@B22@W) @GLizardfolk\r\n",
   "@B23@W) @GWarhost\r\n",
   "@B24@W) @MFaerie\r\n",
+  "@B25@W) @MSpirit\r\n",
 };
 
 /*
@@ -162,6 +166,7 @@ int parse_race(struct char_data *ch, int arg)
   case 22: race = RACE_LIZARDFOLK ; break;
   case 23: race = RACE_WARHOST    ; break;
   case 24: race = RACE_FAERIE     ; break;
+  case 25: race = RACE_SPIRIT     ; break;
   default: race = RACE_UNDEFINED  ; break;
   }
   if (race >= 0 && race < NUM_RACES)
@@ -198,6 +203,7 @@ int racial_ability_mods[][6] = {
 /* RACE_LIZARDFOLK  */ {  0,  0,  0,  0,  0,  0 },
 /* RACE_WARHOST     */ {  0,  0,  0,  0,  0,  0 },
 /* RACE_FAERIE      */ {  0,  0,  0,  0,  0,  0 },
+/* RACE_SPIRIT      */ {  0,  0,  0,  0,  0,  0 },                       
 { 0, 0, 0, 0, 0}
 };
 
@@ -248,7 +254,8 @@ struct {
 /* RACE_KOBOLD     */ { {141, 147, 135}, 26, {46, 54, 39}, 89},
 /* RACE_LIZARDFOLK */ { {141, 147, 135}, 26, {46, 54, 39}, 89},
 /* RACE_WARHOST    */ { {141, 147, 135}, 26, {46, 54, 39}, 89},
-/* RACE_FAERIE     */ { {141, 147, 135}, 26, {46, 54, 39}, 89}
+/* RACE_FAERIE     */ { {141, 147, 135}, 26, {46, 54, 39}, 89},
+/* RACE_SPIRIT     */ { {0,    0,   0},   0, {0,   0,  0},  0}
 };
 
 
@@ -333,7 +340,8 @@ const int race_def_sizetable[NUM_RACES + 1] =
 /* KOBOLD */	SIZE_MEDIUM,
 /* LIZARDFOLK */SIZE_MEDIUM,
 /* WARHOST */	SIZE_MEDIUM,
-/* FAERIE */	SIZE_TINY
+/* FAERIE */	SIZE_TINY,
+/* SPIRIT*/     SIZE_TINY
 };
 
 
@@ -417,7 +425,8 @@ int race_bodyparts[NUM_RACES][NUM_WEARS] = {
 /* RACE_KOBOLD      */ {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1 },
 /* RACE_LIZARDFOLK  */ {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1 },
 /* RACE_WARHOST     */ {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-/* RACE_FAERIE      */ {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }
+/* RACE_FAERIE      */ {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+/* RACE_SPIRIT      */ {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
 };
 
 void racial_body_parts(struct char_data *ch) {
