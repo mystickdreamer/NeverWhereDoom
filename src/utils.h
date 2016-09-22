@@ -673,6 +673,7 @@ int wield_type(int chsize, const struct obj_data *weap);
 #define IS_LIZARDFOLK(ch)       (GET_RACE(ch) == RACE_LIZARDFOLK)
 #define IS_WARHOST(ch)          (GET_RACE(ch) == RACE_WARHOST)
 #define IS_FAERIE(ch)           (GET_RACE(ch) == RACE_FAERIE)
+#define IS_SPIRIT(ch)           (GET_RACE(ch) == RACE_SPIRIT)
 #define IS_UNDEAD(ch)           (IS_AFFECTED(ch, AFF_UNDEAD))
 
 #define OUTSIDE(ch)	(OUTSIDE_ROOMFLAG(ch) && OUTSIDE_SECTTYPE(ch))

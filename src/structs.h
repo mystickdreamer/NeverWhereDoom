@@ -245,8 +245,9 @@ typedef unsigned int ush_int;
 #define RACE_LIZARDFOLK		21
 #define RACE_WARHOST		22
 #define RACE_FAERIE		23
+#define RACE_SPIRIT             24
 
-#define NUM_RACES		24
+#define NUM_RACES		25
 
 #define ALIGN_LAWFUL_GOOD        0
 #define ALIGN_NEUTRAL_GOOD       1

@@ -226,7 +226,8 @@ int class_ok_race[NUM_RACES][NUM_CLASSES] = {
   /* Kobold     */ { N, N, N, N, N, N, Y, Y, Y, Y, Y, N, Y, N, N, N, Y, N, N, N, N, N, N, N, N, N, N, N, N },
   /* Mindflayer */ { N, N, N, N, N, N, Y, Y, Y, Y, Y, N, Y, N, N, N, Y, N, N, N, N, N, N, N, N, N, N, N, N },
   /* Warhost    */ { N, N, N, N, N, N, Y, Y, Y, Y, Y, N, Y, N, N, N, Y, N, N, N, N, N, N, N, N, N, N, N, N },
-  /* Faerie     */ { N, N, N, N, N, N, Y, Y, Y, Y, Y, N, Y, N, N, N, Y, N, N, N, N, N, N, N, N, N, N, N, N }
+  /* Faerie     */ { N, N, N, N, N, N, Y, Y, Y, Y, Y, N, Y, N, N, N, Y, N, N, N, N, N, N, N, N, N, N, N, N },
+  /* Spirit     */ { N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N }
 };
 
 /* Adapted from the SRD under OGL, see ../doc/srd.txt for information */
@@ -269,7 +270,8 @@ int favored_class[NUM_RACES] = {
 /* Kobold     */ -1,
 /* Lizardfolk */ -1,
 /* Warhost    */ -1,
-/* Faerie     */ -1
+/* Faerie     */ -1,
+/* Spirit     */ -1
 };
 
 /* Adapted from the SRD under OGL, see ../doc/srd.txt for information */
@@ -874,7 +876,8 @@ int race_template[NUM_RACES][6] = {
 /* Kobold  	*/ { 10, 10, 10, 10, 10, 10 },
 /* Lizardfolk  	*/ { 10, 10, 10, 10, 10, 10 },
 /* Warhost  	*/ { 10, 10, 10, 10, 10, 10 },
-/* Faerie 	*/ { 10, 10, 10, 10, 10, 10 }
+/* Faerie 	*/ { 10, 10, 10, 10, 10, 10 },
+/* Spirit 	*/ { 10, 10, 10, 10, 10, 10 }
 };
 
 void cedit_creation(struct char_data *ch)
