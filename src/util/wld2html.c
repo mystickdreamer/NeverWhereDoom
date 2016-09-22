@@ -266,7 +266,7 @@ void discrete_load(FILE * fl)
 	fprintf(stderr, "Format error after room #%d\n", last);
 	exit(1);
       }
-      if (nr >= 99999)
+      if (nr >= 999999999)
 	return;
       else
 	parse_room(fl, nr);
