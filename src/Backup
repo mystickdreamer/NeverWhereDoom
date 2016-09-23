@@ -1,0 +1,128 @@
+Backup from interpreter.c
+
+line 1774
+ case CON_QSEX:		/* query sex of new user         */
+    switch (*arg) {
+    case 'm':
+    case 'M':
+      d->character->sex = SEX_MALE;
+      break;
+    case 'f':
+    case 'F':
+      d->character->sex = SEX_FEMALE;
+      break;
+    default:
+      write_to_output(d, "That is not a sex..\r\n"
+		"What IS your sex? ");
+      return;
+    }
+
+    display_races(d);
+    STATE(d) = CON_QRACE;
+    break;
+
+
+
+    case CON_QRACE:
+    switch (*arg) {
+      case 'r':
+      case 'R':
+        while (load_result == RACE_UNDEFINED) {
+          rr = rand_number(1, NUM_RACES);
+          load_result = parse_race(d->character, rr);
+        }
+        break;
+      case 't':
+      case 'T':
+        display_races_help(d);
+        STATE(d) = CON_RACE_HELP;
+        return;
+    }
+    if (load_result == RACE_UNDEFINED)
+      load_result = parse_race(d->character, atoi(arg));
+      if (load_result == RACE_UNDEFINED) {
+        write_to_output(d, "\r\nThat's not a race.\r\nRace: ");
+        return;
+      } else
+        GET_RACE(d->character) = load_result;
+
+    display_classes(d);
+    STATE(d) = CON_QCLASS;
+    break;
+
+  case CON_RACE_HELP:
+    if (*arg == 't' || *arg == 'T') {
+      display_races(d);
+      STATE(d) = CON_QRACE;
+      return;
+    }
+    if (isdigit(*arg)) {
+      player_i = atoi(arg);
+      if (player_i > NUM_RACES || player_i < 1) {
+	write_to_output(d, "\r\nThat's not a race.\r\nHelp on Race #: ");
+	break;
+      }
+      player_i -= 1;
+      if (race_ok_gender[(int)GET_SEX(d->character)][player_i])
+	show_help(d, race_names[player_i]);
+      else
+	write_to_output(d, "\r\nThat's not a race.\r\nHelp on Race #: ");
+    } else {
+      display_races_help(d);
+    }
+    STATE(d) = CON_RACE_HELP;
+    break;
+  
+
+  case CON_CLASS_HELP:
+    if (*arg == 't' || *arg == 'T') {
+      display_classes(d);
+      STATE(d) = CON_QCLASS;
+      return;
+    }
+
+    if (isdigit(*arg)) {
+      player_i = atoi(arg);
+      if (player_i > NUM_BASIC_CLASSES || player_i < 1) {
+	write_to_output(d, "\r\nThat's not a class.\r\nHelp on Class #: ");
+	break;
+      }
+
+     player_i -= 1;
+      if (class_ok_race[(int)GET_SEX(d->character)][player_i])
+        show_help(d, class_names[player_i]);
+      else
+	write_to_output(d, "\r\nThat's not a class.\r\nHelp on Class #: ");
+    } else {
+      display_classes_help(d);
+    }
+    STATE(d) = CON_CLASS_HELP;
+    break;
+
+
+  case CON_QCLASS:
+    switch (*arg) {
+      case 'r':
+      case 'R':
+        while (load_result == CLASS_UNDEFINED) {
+          rr = rand_number(1, NUM_BASIC_CLASSES);
+          load_result = parse_class(d->character, rr);
+        }
+        break;
+      case 't':
+      case 'T':
+        display_classes_help(d);
+        STATE(d) = CON_CLASS_HELP;
+        return;
+    }
+    if (load_result == CLASS_UNDEFINED)
+    load_result = parse_class(d->character, atoi(arg));
+    if (load_result == CLASS_UNDEFINED) {
+      write_to_output(d, "\r\nThat's not a class.\r\nClass: ");
+      return;
+    } else
+      GET_CLASS(d->character) = load_result;
+
+    write_to_output(d, "\r\n*** PRESS RETURN: ");
+    STATE(d) = CON_QROLLSTATS;
+    break;

@@ -10,6 +10,7 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>TEST</itemPath>
   </logicalFolder>
   <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
   <sourceRootList>
@@ -38,6 +39,8 @@
           </cTool>
         </makeTool>
       </makefileType>
+      <item path="TEST" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="act.comm.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>

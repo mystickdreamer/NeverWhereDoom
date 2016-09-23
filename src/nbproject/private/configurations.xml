@@ -142,6 +142,7 @@
       <in>zmalloc.c</in>
       <in>zmalloc.h</in>
     </df>
+    <itemPath>TEST</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
