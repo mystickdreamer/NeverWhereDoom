@@ -1759,7 +1759,7 @@ void nanny(struct descriptor_data *d, char *arg)
     if (STATE(d) == CON_CNFPASSWD) {
 //      write_to_output(d, "\r\nWhat is your sex (@WM/F@n)? ");
 //     STATE(d) = CON_QSEX;
-        SET_BIT_AR(PLR_FLAGS(ch), PLR_NEW);
+        SET_BIT_AR(PLR_FLAGS(d->character), PLR_NEW);
         STATE(d) = CON_MENU
     } else {
       save_char(d->character);
