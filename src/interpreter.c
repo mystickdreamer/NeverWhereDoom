@@ -1757,8 +1757,8 @@ void nanny(struct descriptor_data *d, char *arg)
     echo_on(d);
 
     if (STATE(d) == CON_CNFPASSWD) {
-        write_to_output(d, "\r\n");
-        write_to_output(d, "\r\n");
+        write_to_output(d, " \r\n");
+        write_to_output(d, " \r\n");
       write_to_output(d, "\r\nPress Enter. ");
       write_to_output(d, "\r\n");
 //     STATE(d) = CON_QSEX;
