@@ -1757,10 +1757,10 @@ void nanny(struct descriptor_data *d, char *arg)
     echo_on(d);
 
     if (STATE(d) == CON_CNFPASSWD) {
-//      write_to_output(d, "\r\nWhat is your sex (@WM/F@n)? ");
-//     STATE(d) = CON_QSEX;
+      write_to_output(d, "\r\nWhat is your sex (@WM/F@n)? ");
+     STATE(d) = CON_QSEX;
         SET_BIT_AR(PLR_FLAGS(ch), PLR_NEW);
-        STATE(d) = CON_MENU
+//        STATE(d) = CON_MENU
     } else {
       save_char(d->character);
       write_to_output(d, "\r\nDone.\r\n%s", CONFIG_MENU);
