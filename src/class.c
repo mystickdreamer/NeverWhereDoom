@@ -227,7 +227,7 @@ int class_ok_race[NUM_RACES][NUM_CLASSES] = {
   /* Mindflayer */ { N, N, N, N, N, N, Y, Y, Y, Y, Y, N, Y, N, N, N, Y, N, N, N, N, N, N, N, N, N, N, N, N },
   /* Warhost    */ { N, N, N, N, N, N, Y, Y, Y, Y, Y, N, Y, N, N, N, Y, N, N, N, N, N, N, N, N, N, N, N, N },
   /* Faerie     */ { N, N, N, N, N, N, Y, Y, Y, Y, Y, N, Y, N, N, N, Y, N, N, N, N, N, N, N, N, N, N, N, N },
-  /* Spirit     */ { N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N }
+  /* Spirit     */ { Y, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N, N }
 };
 
 /* Adapted from the SRD under OGL, see ../doc/srd.txt for information */
