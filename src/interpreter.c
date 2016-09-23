@@ -1465,7 +1465,9 @@ int enter_player_game (struct descriptor_data *d)
 
       /* If char was saved with NOWHERE, or real_room above failed... */
       if (load_room == NOWHERE) {
-	if (GET_ADMLEVEL(d->character))
+          if (GET_RACE(d->character) == 23)
+              load_room = real_room(CONFIG_CREATE_START);
+          else if (GET_ADMLEVEL(d->character))
 	  load_room = real_room(CONFIG_IMMORTAL_START);
 	else
 	  load_room = real_room(CONFIG_MORTAL_START);
@@ -1757,6 +1759,17 @@ void nanny(struct descriptor_data *d, char *arg)
 //      write_to_output(d, "\r\nWhat is your sex (@WM/F@n)? ");
 //     STATE(d) = CON_QSEX;
         GET_RACE(d->character) = 23;
+        load_result = enter_player_game(d);
+      send_to_char(d->character, "%s", CONFIG_WELC_MESSG);
+      act("$n has entered the game.", TRUE, d->character, 0, 0, TO_ROOM);
+      d->character->time.logon = time(0);
+      greet_mtrigger(d->character, -1);
+      greet_memory_mtrigger(d->character);
+
+      STATE(d) = CON_PLAYING;
+      look_at_room(IN_ROOM(d->character), d->character, 0);
+      /* We've updated to 3.1 - some bits might be set wrongly: */
+      REMOVE_BIT_AR(PRF_FLAGS(d->character), PRF_BUILDWALK);
     } else {
       save_char(d->character);
       write_to_output(d, "\r\nDone.\r\n%s", CONFIG_MENU);
