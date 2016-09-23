@@ -1460,7 +1460,7 @@ int enter_player_game (struct descriptor_data *d)
       /* We have to place the character in a room before equipping them
        * or equip_char() will gripe about the person in NOWHERE. */
 
-      if (GET_RACE(ch) == RACE_SPIRIT)
+      if (GET_RACE(d->character) == RACE_SPIRIT)
               load_room = real_room(CONFIG_CREATE_START);
       
       if ((load_room = GET_LOADROOM(d->character)) != NOWHERE)
