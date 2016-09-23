@@ -1465,7 +1465,7 @@ int enter_player_game (struct descriptor_data *d)
 
       /* If char was saved with NOWHERE, or real_room above failed... */
       if (load_room == NOWHERE) {
-          if (GET_RACE(d->character) == 24)
+          if (GET_RACE(d->character) == Spirit)
               load_room = real_room(CONFIG_CREATE_START);
           else if (GET_ADMLEVEL(d->character))
 	  load_room = real_room(CONFIG_IMMORTAL_START);
