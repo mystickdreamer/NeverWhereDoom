@@ -2029,10 +2029,10 @@ void nanny(struct descriptor_data *d, char *arg)
       greet_memory_mtrigger(d->character);
 
       STATE(d) = CON_PLAYING;
-      if (GET_LEVEL(d->character) == 0) {
+/*      if (GET_LEVEL(d->character) == 0) {
 	do_start(d->character);
 	send_to_char(d->character, "%s", CONFIG_START_MESSG);
-      }
+      }*/
       look_at_room(IN_ROOM(d->character), d->character, 0);
       if (has_mail(GET_IDNUM(d->character)))
 	send_to_char(d->character, "\r\nYou have mail waiting.\r\n");
