@@ -336,8 +336,9 @@ typedef unsigned int ush_int;
 #define PLR_AGEVEN_G	21  /* Player has had pos of venerable age	*/
 #define PLR_AGEVEN_B	22  /* Player has had neg of venerable age	*/
 #define PLR_OLDAGE	23  /* Player is dead of old age	*/
+#define PLR_NEW         24 /* New Player */
 
-#define NUM_PLR_FLAGS 24
+#define NUM_PLR_FLAGS 25
 
 /* Mobile flags: used by char_data.act */
 #define MOB_SPEC		0  /* Mob has a callable spec-proc   	*/

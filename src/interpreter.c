@@ -1460,16 +1460,12 @@ int enter_player_game (struct descriptor_data *d)
       /* We have to place the character in a room before equipping them
        * or equip_char() will gripe about the person in NOWHERE. */
 
-      if (GET_RACE(d->character) == RACE_SPIRIT)
-              load_room = real_room(CONFIG_CREATE_START);
-      
       if ((load_room = GET_LOADROOM(d->character)) != NOWHERE)
 	load_room = real_room(load_room);
 
       /* If char was saved with NOWHERE, or real_room above failed... */
       if (load_room == NOWHERE) {
-          
-        if (GET_ADMLEVEL(d->character))
+	if (GET_ADMLEVEL(d->character))
 	  load_room = real_room(CONFIG_IMMORTAL_START);
 	else
 	  load_room = real_room(CONFIG_MORTAL_START);
@@ -1477,6 +1473,9 @@ int enter_player_game (struct descriptor_data *d)
 
       if (PLR_FLAGGED(d->character, PLR_FROZEN))
 	load_room = real_room(CONFIG_FROZEN_START);
+      
+      if (PLR_FLAGGED(d->character, PLR_NEW))
+	load_room = real_room(CONFIG_CREATE_START);
 
       d->character->next = character_list;
       character_list = d->character;
@@ -1760,17 +1759,8 @@ void nanny(struct descriptor_data *d, char *arg)
     if (STATE(d) == CON_CNFPASSWD) {
 //      write_to_output(d, "\r\nWhat is your sex (@WM/F@n)? ");
 //     STATE(d) = CON_QSEX;
-        GET_RACE(d->character) = 24;
-        load_result = enter_player_game(d);
-      send_to_char(d->character, "%s", CONFIG_WELC_MESSG);
-      act("$n has entered the game.", TRUE, d->character, 0, 0, TO_ROOM);
-      d->character->time.logon = time(0);
-      greet_mtrigger(d->character, -1);
-      greet_memory_mtrigger(d->character);
-
-      STATE(d) = CON_PLAYING;
-      look_at_room(IN_ROOM(d->character), d->character, 0);
-
+        SET_BIT_AR(PLR_FLAGS(ch), PLR_NEW);
+        STATE(d) = CON_MENU
     } else {
       save_char(d->character);
       write_to_output(d, "\r\nDone.\r\n%s", CONFIG_MENU);
