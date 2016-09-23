@@ -881,9 +881,9 @@ void cedit_disp_room_numbers(struct descriptor_data *d)
   
   write_to_output(d, "\r\n\r\n"
         "@WA@B) @CCreate Start Room   : @c%d\r\n"
-  	"@WA@B) @CMortal Start Room   : @c%d\r\n"
-  	"@WB@B) @CImmortal Start Room : @c%d\r\n"
-  	"@WC@B) @CFrozen Start Room   : @c%d\r\n"
+  	"@WB@B) @CMortal Start Room   : @c%d\r\n"
+  	"@WC@B) @CImmortal Start Room : @c%d\r\n"
+  	"@WD@B) @CFrozen Start Room   : @c%d\r\n"
   	"@W1@B) @CDonation Room #1    : @c%d\r\n"
   	"@W2@B) @CDonation Room #2    : @c%d\r\n"
   	"@W3@B) @CDonation Room #3    : @c%d\r\n"

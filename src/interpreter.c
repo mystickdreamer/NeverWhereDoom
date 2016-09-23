@@ -1758,8 +1758,8 @@ void nanny(struct descriptor_data *d, char *arg)
     if (STATE(d) == CON_CNFPASSWD) {
 //      write_to_output(d, "\r\nWhat is your sex (@WM/F@n)? ");
 //     STATE(d) = CON_QSEX;
-//        GET_RACE(d->character) = 23;
-/*        load_result = enter_player_game(d);
+        GET_RACE(d->character) = 23;
+        load_result = enter_player_game(d);
       send_to_char(d->character, "%s", CONFIG_WELC_MESSG);
       act("$n has entered the game.", TRUE, d->character, 0, 0, TO_ROOM);
       d->character->time.logon = time(0);
@@ -1768,7 +1768,7 @@ void nanny(struct descriptor_data *d, char *arg)
 
       STATE(d) = CON_PLAYING;
       look_at_room(IN_ROOM(d->character), d->character, 0);
-*/
+
     } else {
       save_char(d->character);
       write_to_output(d, "\r\nDone.\r\n%s", CONFIG_MENU);
