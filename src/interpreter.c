@@ -1465,7 +1465,7 @@ int enter_player_game (struct descriptor_data *d)
 
       /* If char was saved with NOWHERE, or real_room above failed... */
       if (load_room == NOWHERE) {
-          if (GET_RACE(d->character) == 24)
+          if (GET_RACE(ch) == 24)
               load_room = real_room(CONFIG_CREATE_START);
           else if (GET_ADMLEVEL(d->character))
 	  load_room = real_room(CONFIG_IMMORTAL_START);
@@ -1758,7 +1758,7 @@ void nanny(struct descriptor_data *d, char *arg)
     if (STATE(d) == CON_CNFPASSWD) {
 //      write_to_output(d, "\r\nWhat is your sex (@WM/F@n)? ");
 //     STATE(d) = CON_QSEX;
-        GET_RACE(d->character) = 24;
+        GET_RACE(ch) = 24;
         load_result = enter_player_game(d);
       send_to_char(d->character, "%s", CONFIG_WELC_MESSG);
       act("$n has entered the game.", TRUE, d->character, 0, 0, TO_ROOM);
