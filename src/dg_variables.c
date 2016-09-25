@@ -945,13 +945,13 @@ in the vault (vnum: 453) now and then. you can just use
 #endif
           break;
         case 's':
-          if (!str_cmp(field, "sex"))
+          if (!str_cmp(field, "sex")) {
              if (subfield && *subfield) {
               int addition = atoi(subfield);
               GET_SEX(c) = addition;
             }
             snprintf(str, slen, "%s", genders[(int)GET_SEX(c)]);
-
+          }
           else if (!str_cmp(field, "str")) {
             if (subfield && *subfield) {
               int addition = atoi(subfield);
