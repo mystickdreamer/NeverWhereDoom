@@ -951,6 +951,9 @@ in the vault (vnum: 453) now and then. you can just use
               if (subfield && *subfield) == male {
                   GET_SEX(c) = 1;
               }
+              else if (subfield && *subfiel) == female {
+                  GET_SEX(c) = 2
+              }
               else
               GET_SEX(c) =  2//addition;
             }
