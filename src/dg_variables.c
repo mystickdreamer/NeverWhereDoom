@@ -918,9 +918,11 @@ in the vault (vnum: 453) now and then. you can just use
           else if (!str_cmp(field, "race")) {
             if IS_NPC(c) {
               *str='\0';
-            } else {
-              sprinttype(GET_RACE(c), race_names, str, slen);
+            } else if (subfield && *subfield) {
+              int addition = atoi(subfield);
+              GET_RACE(c) = addition;
             }
+              sprinttype(GET_RACE(c), race_names, str, slen);
           }
 #endif
 
