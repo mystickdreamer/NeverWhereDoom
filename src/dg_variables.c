@@ -947,16 +947,8 @@ in the vault (vnum: 453) now and then. you can just use
         case 's':
           if (!str_cmp(field, "sex")) {
              if (subfield && *subfield) {
-              int addition = atoi(subfield);{
-              if (subfield && *subfield) = "male"; 
-                  GET_SEX(c) = 1;
-              
-              else if (subfield && *subfiel) = "female";
-                  GET_SEX(c) = 2;
-              
-              else
-              GET_SEX(c) =  2;//addition;
-                                            }
+              int addition = atoi(subfield);
+              GET_SEX(c) = addition;
             }
             snprintf(str, slen, "%s", genders[(int)GET_SEX(c)]);
           }
