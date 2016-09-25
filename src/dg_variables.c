@@ -948,7 +948,11 @@ in the vault (vnum: 453) now and then. you can just use
           if (!str_cmp(field, "sex")) {
              if (subfield && *subfield) {
               int addition = atoi(subfield);
-              GET_SEX(c) = addition;
+              if (subfield && *subfield) == male {
+                  GET_SEX(c) = 1;
+              }
+              else
+              GET_SEX(c) =  2//addition;
             }
             snprintf(str, slen, "%s", genders[(int)GET_SEX(c)]);
           }
